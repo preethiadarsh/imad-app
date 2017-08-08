@@ -9,7 +9,7 @@ var articles=
 {
 
 
-    articleOne:
+    'article-one':
     {
         title: 'Article One: By M.Sivakumar',
         heading: 'Article One',
@@ -26,7 +26,7 @@ var articles=
         </p>`
     },
 
-    articleTwo:
+    'article-two':
     {
         title: 'Article Two: By M.Sivakumar',
         heading: 'Article Two',
@@ -43,7 +43,7 @@ var articles=
         </p>`
     },
 
-    articleThree:
+    'article-three':
     {
         title: 'Article Three: By M.Sivakumar',
         heading: 'Article Three',
@@ -110,8 +110,13 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function (req, res) {
-  res.send(createTemplate(articleOne));
+app.get('/:articleName', function (req, res)
+{
+  // articleName==article-one
+  // articles[articleName]= { }content object of article-one
+  var articleName=req.params.articleName;
+  res.send(createTemplate(articles[articleName]));
+  
 });
 
 app.get('/article-two', function (req, res) {
