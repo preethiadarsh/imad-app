@@ -4,7 +4,14 @@ var element=document.getElementById('main-text');
 element.innerHTML="My New Value";
 // Move the image
 var img=document.getElementById('madi');
+var marginLeft=o;
+function moveRight()
+{
+   marginLeft=marginLeft+10;
+   img.style.marginLeft=marginLeft+'px';
+}
 img.onclick=function()
 { 
-   img.style.marginLeft='100px'; 
+   var interval=setinterval(moveRight, 100);
+    
 };
