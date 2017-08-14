@@ -33,8 +33,19 @@ var submit=document.getElementById('submit_btn');
 Submit.onclick=function()
 {
     // Make a request to the Server and send the name
+    
     // Capture the response, ie., the list of names and render it as a list
-}
+    var names=['name1', 'name2', 'name3'];
+    var list='';
+    for (var i=0; i<names.length; i++)
+    { 
+        list+= '<li>' + names[i] + '</li>';
+        
+    }
+    
+    var ul=document.getElementById('namelist');
+    ul.innerHTML=list;
+};
 
 
 
