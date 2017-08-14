@@ -27,8 +27,7 @@ button.onclick=function()
 };    
 
 //Submit name
-var nameInput=document.getElementById('name');
-var name=nameInput.value;
+
 var submit=document.getElementById('submit_btn');
 submit.onclick=function()
 {
@@ -62,6 +61,8 @@ submit.onclick=function()
     };
     // Make a request to the Server and send the name
     //Make the Request
+    var nameInput=document.getElementById('name');
+    var name=nameInput.value;
    request.open('GET', "http://preethiadarsh9700.imad.hasura-app.io/submit-name?name=" + name, true);
    request.send(null);
     // Capture the response, ie., the list of names and render it as a list
