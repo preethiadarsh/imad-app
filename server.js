@@ -123,6 +123,27 @@ app.get('/counter', function (req, res)
   res.send(counter.toString());
 });
 
+app.get('/submit-name', function (req, res)
+{
+    // URL:/submit-name?name=xxxxx
+    // Get the name from the request
+    var name= req.query.name; //ToDO
+   names.push(name);
+    //JSON:JavaScript Object Notation
+    
+   res.send(JSON.stringify(names)); //ToDo
+
+// following code is for request with variable 'name' passed on to server
+//app.get('/submit-name/:name', function (req, res)
+//{
+    // Get the name from the request
+ //   var name= req.params.name; //ToDO
+ //   names.push(name);
+    //JSON:JavaScript Object Notation
+    
+ //   res.send(JSON.stringify(names)); //ToDo
+  
+});
 
 app.get('/:articleName', function (req, res)
 {
