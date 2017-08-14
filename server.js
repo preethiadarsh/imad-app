@@ -152,14 +152,26 @@ app.get('/ui/madi.png', function (req, res)
 });
 
 var names=[];
-app.get('/submit-name/:name', function (req, res)
+
+app.get('/submit-name', function (req, res)
 {
+    // URL:/submit-name?name=xxxxx
     // Get the name from the request
-    var name= req.params.name; //ToDO
-    names.push(name);
+    var name= req.query.name; //ToDO
+   names.push(name);
     //JSON:JavaScript Object Notation
     
-    res.send(JSON.stringify(names)); //ToDo
+   res.send(JSON.stringify(names)); //ToDo
+
+// following code is for request with variable 'name' passed on to server
+//app.get('/submit-name/:name', function (req, res)
+//{
+    // Get the name from the request
+ //   var name= req.params.name; //ToDO
+ //   names.push(name);
+    //JSON:JavaScript Object Notation
+    
+ //   res.send(JSON.stringify(names)); //ToDo
   
 });
 
