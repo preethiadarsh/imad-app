@@ -26,7 +26,15 @@ button.onclick=function()
    request.send(null);
 };    
 
-
+//Submit name
+var nameInput=document.getElementById('name');
+var name=nameInput.value;
+var submit=document.getElementById('submit_btn');
+Submit.onclick=function()
+{
+    // Make a request to the Server and send the name
+    // Capture the response, ie., the list of names and render it as a list
+}
 
 
 
