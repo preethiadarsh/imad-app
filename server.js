@@ -174,7 +174,7 @@ app.get('/submit-name', function (req, res)
   
 });
 
-app.get('/articles:articleName', function (req, res)
+app.get('/articles/:articleName', function (req, res)
 {
   // articleName==article-one
   // articles[articleName]= { }content object of article-one
@@ -184,7 +184,7 @@ app.get('/articles:articleName', function (req, res)
   {
       if(err)
       {
-          res.status(500).send (err.tostring());
+          res.status(500).send (err.toString());
       }
       else
       {
@@ -199,10 +199,10 @@ app.get('/articles:articleName', function (req, res)
           }
       }
       { 
-          res.send(JSON.stringify(result.rows));
+          //res.send(JSON.stringify(result.rows));
       }
   }
-  res.send(createTemplate(articleData));
+  //res.send(createTemplate(articleData));
   
 });
 
