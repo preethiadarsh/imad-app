@@ -11,7 +11,7 @@ var config=
     port: '5432',
     password: process.env.DB_PASSWORD
     
-}
+};
 var app = express();
 app.use(morgan('combined'));
 
@@ -136,7 +136,8 @@ app.get('/test-db', function (req, res)
   {
       if (err)
       {
-          res.status(500).send (err.tostring());
+          res.status(500).send (err.to
+          String());
       }
       else
       { 
