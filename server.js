@@ -76,7 +76,7 @@ app.get('/test-db', function (req, res)
 {
   // make a select request
   // return a response with the results
-  pool.query('SELECT * FROM test', function(err, result)
+  pool.query("SELECT * FROM test", function(err, result)
   {
       if (err)
       {
@@ -109,7 +109,7 @@ app.get('/submit-name', function (req, res)
 
   
 });
-
+var  articles=[];
 app.get('/articles/:articleName', function (req, res)
 {
   // articleName==article-one
@@ -158,7 +158,8 @@ app.get('/ui/main.js', function (req, res)
 
 
 var port = 80;
-app.listen(port, function () {
+app.listen(port, function ()
+{
   console.log(`IMAD course app listening on port ${port}!`);
 });
 
