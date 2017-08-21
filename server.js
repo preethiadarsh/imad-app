@@ -30,9 +30,13 @@ function createTemplate (data)
     `
     <html>
         <head>
-            <title>
-            ${title}    
+            <title
+ 
+            ${title}
+            
             </title>
+             <meta name="viewport" content="width-device-width, initial-scale=1" />
+
               <link href="/ui/style.css" rel="stylesheet" />
             
         </head>
@@ -62,11 +66,6 @@ function createTemplate (data)
     return htmlTemplate;
     }
 
-app.get('/favicon.ico', function (req, res) {
-
-  res.sendFile(path.join(__dirname, 'ui', 'favicon.ico'));
-
-});
 
 app.get('/', function (req, res)
 {
