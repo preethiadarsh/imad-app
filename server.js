@@ -145,6 +145,8 @@ app.post('/login', function(req, res)
               {
                   res.send('Credentials correct');
                   
+                  // Set a Session
+                  
               }
               else
               {
