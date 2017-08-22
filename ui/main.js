@@ -21,7 +21,7 @@ submit.onclick=function()
             }
             else if (request.staus===403)
             { 
-               alert('Username/Password is incorrect'); 
+               alert('Username or Password is incorrect'); 
             }
             else if (request.staus===500)
             { 
