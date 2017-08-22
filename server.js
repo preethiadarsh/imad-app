@@ -30,7 +30,7 @@ function createTemplate(data)
     `
     <html>
         <head>
-            <title
+            <title>
  
             ${title}
             
