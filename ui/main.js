@@ -19,11 +19,11 @@ submit.onclick=function()
               console.log('User is logged in');
               alert('Logged in Successfully');
             }
-            else if (request.staus===403)
+            else if (request.status===403)
             { 
                alert('Username or Password is incorrect'); 
             }
-            else if (request.staus===500)
+            else if (request.status===500)
             { 
                alert('Something went wrong in the server'); 
             }
