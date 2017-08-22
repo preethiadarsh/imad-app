@@ -76,7 +76,14 @@ function hash(input, salt)
 {
     //how do we create a hash function
     var hashed=crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
-    return hashed.toString('hex');
+    return ["pbkdf2", "10000", salt, hashed.toString('hex')].join('$');
+    //algoritm: md5
+    //"password" -> jdu3eiwwl4scmdk54lwdk6edqmv8nhd
+    //"password-this-is-some-random-string" -> kjdidle98dlleo30elmbndkf74
+    //"password+salt" -> hash1 -> hash2 -> hash3-> ..... hash10ktimes
+    //
+    //
+    
 }
 
 
