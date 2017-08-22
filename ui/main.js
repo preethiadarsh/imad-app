@@ -23,7 +23,7 @@ submit.onclick=function()
             { 
                alert('Username or Password is incorrect'); 
             }
-            else if (request.staus===500)
+            else if (request.staus===502)
             { 
                alert('Something went wrong in the server'); 
             }
