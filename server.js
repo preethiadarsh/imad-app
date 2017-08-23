@@ -164,9 +164,7 @@ app.post('/login', function(req, res)
               }
           }
       }
-      { 
-          res.send("User Successfully Created with Username:" + username);
-      } 
+      
     });
 });
 
