@@ -148,6 +148,12 @@ app.post('/login', function(req, res)
               // Creating a hash based on the password submitted and original salt
               if (hashedPassword===dbString)
               {
+                 // Set the session
+                 req.session.auth={userId: result.rows[0].id};
+                 // Set cookie with a session id
+                 // internally, on the server side, it maps the session id to an object
+                 // {auth: {userId}}}
+                 
                   res.send('Credentials correct');
                   
                  
@@ -162,6 +168,14 @@ app.post('/login', function(req, res)
           res.send("User Successfully Created with Username:" + username);
       } 
     });
+});
+
+app.get('/check-login', function(req, res)
+{
+    if (req.session && req.session.auth && req.session.auth.userId)
+    {
+        res.send('You are logged in:' + req.session.auth.userId.toString());
+    }
 });
 
 var pool= new Pool(config);
